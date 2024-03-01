@@ -52,13 +52,37 @@
 		18EF9F042B91F04F00936D53 /* AmaniAICase */ = {
 			isa = PBXGroup;
 			children = (
-				18EF9F052B91F04F00936D53 /* AppDelegate.swift */,
-				18EF9F092B91F04F00936D53 /* ViewController.swift */,
-				18EF9F112B91F05000936D53 /* Assets.xcassets */,
-				18EF9F162B91F05000936D53 /* Info.plist */,
-				18EF9F0E2B91F04F00936D53 /* AmaniAICase.xcdatamodeld */,
+				18EF9F1F2B91F3E000936D53 /* App */,
+				18EF9F212B91F41D00936D53 /* Scenes */,
+				18EF9F202B91F40D00936D53 /* Resources */,
 			);
 			path = AmaniAICase;
+			sourceTree = "<group>";
+		};
+		18EF9F1F2B91F3E000936D53 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				18EF9F052B91F04F00936D53 /* AppDelegate.swift */,
+				18EF9F162B91F05000936D53 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		18EF9F202B91F40D00936D53 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				18EF9F112B91F05000936D53 /* Assets.xcassets */,
+				18EF9F0E2B91F04F00936D53 /* AmaniAICase.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		18EF9F212B91F41D00936D53 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				18EF9F092B91F04F00936D53 /* ViewController.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +286,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 98M488Q5TV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AmaniAICase/Info.plist;
+				INFOPLIST_FILE = AmaniAICase/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -288,7 +312,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 98M488Q5TV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AmaniAICase/Info.plist;
+				INFOPLIST_FILE = AmaniAICase/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
