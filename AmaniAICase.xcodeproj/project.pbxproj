@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		18EF9F062B91F04F00936D53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EF9F052B91F04F00936D53 /* AppDelegate.swift */; };
-		18EF9F082B91F04F00936D53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EF9F072B91F04F00936D53 /* SceneDelegate.swift */; };
 		18EF9F0A2B91F04F00936D53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EF9F092B91F04F00936D53 /* ViewController.swift */; };
 		18EF9F0D2B91F04F00936D53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EF9F0B2B91F04F00936D53 /* Main.storyboard */; };
 		18EF9F102B91F04F00936D53 /* AmaniAICase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18EF9F0E2B91F04F00936D53 /* AmaniAICase.xcdatamodeld */; };
@@ -19,7 +18,6 @@
 /* Begin PBXFileReference section */
 		18EF9F022B91F04F00936D53 /* AmaniAICase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmaniAICase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EF9F052B91F04F00936D53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18EF9F072B91F04F00936D53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		18EF9F092B91F04F00936D53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18EF9F0C2B91F04F00936D53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18EF9F0F2B91F04F00936D53 /* AmaniAICase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AmaniAICase.xcdatamodel; sourceTree = "<group>"; };
@@ -59,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				18EF9F052B91F04F00936D53 /* AppDelegate.swift */,
-				18EF9F072B91F04F00936D53 /* SceneDelegate.swift */,
 				18EF9F092B91F04F00936D53 /* ViewController.swift */,
 				18EF9F0B2B91F04F00936D53 /* Main.storyboard */,
 				18EF9F112B91F05000936D53 /* Assets.xcassets */,
@@ -144,7 +141,6 @@
 				18EF9F102B91F04F00936D53 /* AmaniAICase.xcdatamodeld in Sources */,
 				18EF9F0A2B91F04F00936D53 /* ViewController.swift in Sources */,
 				18EF9F062B91F04F00936D53 /* AppDelegate.swift in Sources */,
-				18EF9F082B91F04F00936D53 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
