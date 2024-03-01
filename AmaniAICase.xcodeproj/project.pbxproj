@@ -9,20 +9,16 @@
 /* Begin PBXBuildFile section */
 		18EF9F062B91F04F00936D53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EF9F052B91F04F00936D53 /* AppDelegate.swift */; };
 		18EF9F0A2B91F04F00936D53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EF9F092B91F04F00936D53 /* ViewController.swift */; };
-		18EF9F0D2B91F04F00936D53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EF9F0B2B91F04F00936D53 /* Main.storyboard */; };
 		18EF9F102B91F04F00936D53 /* AmaniAICase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18EF9F0E2B91F04F00936D53 /* AmaniAICase.xcdatamodeld */; };
 		18EF9F122B91F05000936D53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18EF9F112B91F05000936D53 /* Assets.xcassets */; };
-		18EF9F152B91F05000936D53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EF9F132B91F05000936D53 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18EF9F022B91F04F00936D53 /* AmaniAICase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmaniAICase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EF9F052B91F04F00936D53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18EF9F092B91F04F00936D53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		18EF9F0C2B91F04F00936D53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18EF9F0F2B91F04F00936D53 /* AmaniAICase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AmaniAICase.xcdatamodel; sourceTree = "<group>"; };
 		18EF9F112B91F05000936D53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		18EF9F142B91F05000936D53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18EF9F162B91F05000936D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,9 +54,7 @@
 			children = (
 				18EF9F052B91F04F00936D53 /* AppDelegate.swift */,
 				18EF9F092B91F04F00936D53 /* ViewController.swift */,
-				18EF9F0B2B91F04F00936D53 /* Main.storyboard */,
 				18EF9F112B91F05000936D53 /* Assets.xcassets */,
-				18EF9F132B91F05000936D53 /* LaunchScreen.storyboard */,
 				18EF9F162B91F05000936D53 /* Info.plist */,
 				18EF9F0E2B91F04F00936D53 /* AmaniAICase.xcdatamodeld */,
 			);
@@ -125,9 +119,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18EF9F152B91F05000936D53 /* LaunchScreen.storyboard in Resources */,
 				18EF9F122B91F05000936D53 /* Assets.xcassets in Resources */,
-				18EF9F0D2B91F04F00936D53 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,25 +137,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		18EF9F0B2B91F04F00936D53 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18EF9F0C2B91F04F00936D53 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		18EF9F132B91F05000936D53 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18EF9F142B91F05000936D53 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		18EF9F172B91F05000936D53 /* Debug */ = {
@@ -291,8 +264,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AmaniAICase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -319,8 +290,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AmaniAICase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
