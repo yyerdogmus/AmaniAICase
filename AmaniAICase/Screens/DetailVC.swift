@@ -9,7 +9,7 @@ import UIKit
 
 class DetailVC: UIViewController {
     
-    var image: Image?
+    var viewModel: DetailViewModel?
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
@@ -79,19 +79,23 @@ class DetailVC: UIViewController {
     }
     
     private func configureUI() {
-        guard let image = image else { return }
+        guard let viewModel = viewModel else { return }
         
-        if let imageURL = URL(string: image.base64) {
+        if let imageURL = viewModel.imageURL {
             imageView.load(url: imageURL)
         }
         
-        titleLabel.text = image.title
-        descriptionLabel.text = image.description
+        titleLabel.text = viewModel.title
+        descriptionLabel.text = viewModel.description
     }
     
     @objc func homeButtonTapped(){
+        guard let image = viewModel?.image else { return }
+        
+        // Pass the image to HomeVC using HomeViewModel
+        let homeViewModel = HomeViewModel(images: [image])
         let homeVC = HomeVC()
-        homeVC.image = image
+        homeVC.viewModel = homeViewModel
         navigationController?.pushViewController(homeVC, animated: true)
     }
 }

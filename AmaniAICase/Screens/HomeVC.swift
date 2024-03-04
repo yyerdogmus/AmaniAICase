@@ -9,7 +9,7 @@ import UIKit
 
 class HomeVC: UIViewController {
     
-    var image: Image?
+    var viewModel: HomeViewModel?
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
@@ -78,14 +78,17 @@ class HomeVC: UIViewController {
     }
     
     private func configureUI() {
-        guard let image = image else { return }
+        guard let viewModel = viewModel else { return }
         
-        if let imageURL = URL(string: image.base64) {
-            imageView.load(url: imageURL)
+        // Update UI with the first image from the viewModel
+        if let firstImage = viewModel.images.first {
+            if let imageURL = URL(string: firstImage.base64) {
+                imageView.load(url: imageURL)
+            }
+            
+            titleLabel.text = firstImage.title
+            idLabel.text = String(firstImage.id)
         }
-        
-        titleLabel.text = image.title
-        idLabel.text = String(image.id)
     }
     
     @objc func goToList() {

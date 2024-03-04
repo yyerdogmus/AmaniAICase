@@ -9,7 +9,7 @@ import UIKit
 class ListVC: UIViewController {
     
     private var collectionView: UICollectionView!
-    private var imageData: ImageData?
+    private var viewModel: ListViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,7 @@ class ListVC: UIViewController {
         title = "List"
         
         setupCollectionView()
-        fetchData()
+        setupViewModel()
     }
     
     private func setupCollectionView() {
@@ -35,43 +35,45 @@ class ListVC: UIViewController {
         view.addSubview(collectionView)
     }
     
-    private func fetchData() {
-        NetworkManager.shared.fetchData { result in
+    private func setupViewModel() {
+        viewModel = ListViewModel()
+        viewModel?.fetchData(completion: { [weak self] result in
             switch result {
-            case .success(let imageData):
-                self.imageData = imageData
+            case .success:
                 DispatchQueue.main.async {
-                    self.collectionView.reloadData()
+                    self?.collectionView.reloadData()
                 }
             case .failure(let error):
                 print("Error fetching data: \(error)")
             }
-        }
+        })
     }
 }
 
 extension ListVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageData?.images.count ?? 0
+        return viewModel?.numberOfImages ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as? ImageCell else {
             return UICollectionViewCell()
         }
-        if let image = imageData?.images[indexPath.item] {
+        if let image = viewModel?.getImage(at: indexPath.item) {
             cell.configure(with: image)
         }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let image = imageData?.images[indexPath.item] else { return }
+        guard let image = viewModel?.getImage(at: indexPath.item) else { return }
         
+        let detailViewModel = DetailViewModel(image: image)
         let detailVC = DetailVC()
-        detailVC.image = image
+        detailVC.viewModel = detailViewModel
         navigationController?.pushViewController(detailVC, animated: true)
     }
+
 }
 
 extension ListVC: UICollectionViewDelegateFlowLayout {
