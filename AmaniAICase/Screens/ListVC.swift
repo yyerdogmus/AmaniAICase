@@ -64,6 +64,14 @@ extension ListVC: UICollectionViewDataSource {
         }
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let image = imageData?.images[indexPath.item] else { return }
+        
+        let detailVC = DetailVC()
+        detailVC.image = image
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
 }
 
 extension ListVC: UICollectionViewDelegateFlowLayout {
