@@ -12,18 +12,23 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        title = "Home"
+        
+        let listButton = UIButton(type: .system)
+        listButton.setTitle("Go to List", for: .normal)
+        listButton.addTarget(self, action: #selector(goToList), for: .touchUpInside)
+        listButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(listButton)
+        
+        NSLayoutConstraint.activate([
+            listButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            listButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func goToList() {
+        let listVC = ListVC()
+        navigationController?.pushViewController(listVC, animated: true)
     }
-    */
-
 }

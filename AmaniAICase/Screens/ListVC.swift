@@ -12,18 +12,23 @@ class ListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        title = "List"
+        
+        let detailButton = UIButton(type: .system)
+        detailButton.setTitle("Go to Detail", for: .normal)
+        detailButton.addTarget(self, action: #selector(goToDetail), for: .touchUpInside)
+        detailButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(detailButton)
+        
+        NSLayoutConstraint.activate([
+            detailButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            detailButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func goToDetail() {
+        let detailVC = DetailVC()
+        navigationController?.pushViewController(detailVC, animated: true)
     }
-    */
-
 }
