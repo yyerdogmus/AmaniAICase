@@ -80,7 +80,6 @@ class HomeVC: UIViewController {
     private func configureUI() {
         guard let viewModel = viewModel else { return }
         
-        // Update UI with the first image from the viewModel
         if let firstImage = viewModel.images.first {
             if let imageURL = URL(string: firstImage.base64) {
                 imageView.load(url: imageURL)

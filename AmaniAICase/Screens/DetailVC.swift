@@ -92,7 +92,6 @@ class DetailVC: UIViewController {
     @objc func homeButtonTapped(){
         guard let image = viewModel?.image else { return }
         
-        // Pass the image to HomeVC using HomeViewModel
         let homeViewModel = HomeViewModel(images: [image])
         let homeVC = HomeVC()
         homeVC.viewModel = homeViewModel
