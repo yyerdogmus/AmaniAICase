@@ -8,6 +8,32 @@
 import UIKit
 
 class HomeVC: UIViewController {
+    
+    var image: Image?
+    
+    private let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let idLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +51,41 @@ class HomeVC: UIViewController {
             listButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             listButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
+        
+        setupUI()
+        configureUI()
+    }
+    
+    private func setupUI() {
+        view.addSubview(imageView)
+        view.addSubview(titleLabel)
+        view.addSubview(idLabel)
+        
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            imageView.heightAnchor.constraint(equalToConstant: 200),
+            
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
+            idLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
+            idLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            idLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+        ])
+    }
+    
+    private func configureUI() {
+        guard let image = image else { return }
+        
+        if let imageURL = URL(string: image.base64) {
+            imageView.load(url: imageURL)
+        }
+        
+        titleLabel.text = image.title
+        idLabel.text = String(image.id)
     }
     
     @objc func goToList() {

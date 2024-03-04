@@ -35,6 +35,14 @@ class DetailVC: UIViewController {
         return label
     }()
     
+    private let homeButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Home", for: .normal)
+        button.addTarget(self, action: #selector(homeButtonTapped), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,6 +57,7 @@ class DetailVC: UIViewController {
         view.addSubview(imageView)
         view.addSubview(titleLabel)
         view.addSubview(descriptionLabel)
+        view.addSubview(homeButton)
         
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
@@ -63,6 +72,9 @@ class DetailVC: UIViewController {
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
             descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
+            homeButton.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 40),
+            homeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
     
@@ -75,5 +87,11 @@ class DetailVC: UIViewController {
         
         titleLabel.text = image.title
         descriptionLabel.text = image.description
+    }
+    
+    @objc func homeButtonTapped(){
+        let homeVC = HomeVC()
+        homeVC.image = image
+        navigationController?.pushViewController(homeVC, animated: true)
     }
 }
