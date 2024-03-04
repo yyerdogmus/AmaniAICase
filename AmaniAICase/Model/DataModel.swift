@@ -8,12 +8,12 @@
 import Foundation
 
 struct ImageData: Codable {
-    let images: [Image]
+    var images: [Image]
 }
 
 struct Image: Codable {
-    let id: Int
-    let title: String
-    let base64: String
-    let description: String
+    var id: Int
+    var title: String
+    var base64: String
+    var description: String
 }

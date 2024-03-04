@@ -26,7 +26,9 @@ class NetworkManager {
             }
             
             do {
-                let imageData = try JSONDecoder().decode(ImageData.self, from: data)
+                var imageData = try JSONDecoder().decode(ImageData.self, from: data)
+                imageData.images.sort(by: { $0.id < $1.id }) // Sort images by ID
+                
                 completion(.success(imageData))
             } catch {
                 completion(.failure(error))
@@ -35,7 +37,7 @@ class NetworkManager {
         
         task.resume()
     }
-    
+
 }
 
 enum NetworkError: Error {
