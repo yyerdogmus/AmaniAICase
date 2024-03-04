@@ -15,6 +15,8 @@
 		18EF9F562B95DC7500936D53 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EF9F552B95DC7500936D53 /* DetailVC.swift */; };
 		18EF9F592B95E83300936D53 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EF9F582B95E83300936D53 /* DataModel.swift */; };
 		18EF9F5D2B95E8B300936D53 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EF9F5C2B95E8B300936D53 /* NetworkManager.swift */; };
+		18EF9F602B9607C600936D53 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EF9F5F2B9607C600936D53 /* ImageCell.swift */; };
+		18EF9F632B96082200936D53 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EF9F622B96082200936D53 /* UIImageViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		18EF9F552B95DC7500936D53 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		18EF9F582B95E83300936D53 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		18EF9F5C2B95E8B300936D53 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		18EF9F5F2B9607C600936D53 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		18EF9F622B96082200936D53 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +66,10 @@
 			children = (
 				18EF9F1F2B91F3E000936D53 /* App */,
 				18EF9F212B91F41D00936D53 /* Screens */,
-				18EF9F5B2B95E89C00936D53 /* Managers */,
+				18EF9F5E2B9607B900936D53 /* Views */,
 				18EF9F572B95E81600936D53 /* Model */,
+				18EF9F5B2B95E89C00936D53 /* Managers */,
+				18EF9F612B96080F00936D53 /* Extensions */,
 				18EF9F202B91F40D00936D53 /* Resources */,
 			);
 			path = AmaniAICase;
@@ -111,6 +117,22 @@
 				18EF9F5C2B95E8B300936D53 /* NetworkManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		18EF9F5E2B9607B900936D53 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18EF9F5F2B9607C600936D53 /* ImageCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		18EF9F612B96080F00936D53 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18EF9F622B96082200936D53 /* UIImageViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,7 +208,9 @@
 				18EF9F542B95DC6B00936D53 /* ListVC.swift in Sources */,
 				18EF9F522B95DC6000936D53 /* HomeVC.swift in Sources */,
 				18EF9F5D2B95E8B300936D53 /* NetworkManager.swift in Sources */,
+				18EF9F632B96082200936D53 /* UIImageViewExtensions.swift in Sources */,
 				18EF9F062B91F04F00936D53 /* AppDelegate.swift in Sources */,
+				18EF9F602B9607C600936D53 /* ImageCell.swift in Sources */,
 				18EF9F562B95DC7500936D53 /* DetailVC.swift in Sources */,
 				18EF9F592B95E83300936D53 /* DataModel.swift in Sources */,
 			);
